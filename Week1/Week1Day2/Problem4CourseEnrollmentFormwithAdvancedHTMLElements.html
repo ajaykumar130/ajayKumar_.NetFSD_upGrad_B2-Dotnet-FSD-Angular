@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Enrollment Form with Advanced HTML Elements</title>
+</head>
+<body>
+    <form action="#" method="post">
+    <fieldset>
+        <legend>Student Details</legend>
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" min="16" max="60" required><br><br>
+    </fieldset>
+    <fieldset>
+        <legend>Course Selection</legend>
+
+        <label for="course">Choose Course:</label><br>
+        <input list="courses" id="course" name="course" required>
+        <datalist id="courses">
+            <option value="HTML">
+            <option value="CSS">
+            <option value="Java">
+        </datalist><br><br>
+
+        <label for="experience">Experience Level (0-10):</label><br>
+        <input type="range" id="experience" name="experience" min="0" max="10" value="5"><br><br>
+
+        <label>Skill Level:</label><br>
+        <meter min="0" max="10" value="5">5 out of 10</meter><br><br>
+
+        <label>Enrollment Completion:</label><br>
+        <progress value="70" max="100">70%</progress><br><br>
+    </fieldset>
+    <button type="submit">Enroll Now</button>
+    </form>
+    
+</body>
+</html>
