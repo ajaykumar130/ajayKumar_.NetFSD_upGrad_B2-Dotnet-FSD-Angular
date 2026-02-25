@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Data</title>
+    <script src="app.js" type="text/javascript" defer></script>
+</head>
+<body>
+
+    <h2>Weather Report</h2>
+    <input type="text" id="cityInput" placeholder="Enter City Name">
+    <button onclick="loadWeatherPromise()">Load Weather (Promise)</button>
+    <button onclick="loadWeatherAsync()">Load Weather (Async)</button>
+
+    <table id="weatherTable" border="1">
+        <thead>
+            <tr>
+                <th>City</th>
+                <th>Temperature</th>
+                <th>Condition</th>
+                <th>Humidity</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+</body>
+</html>
