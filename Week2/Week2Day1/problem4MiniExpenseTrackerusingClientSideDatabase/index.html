@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Tracker</title>
+    <script src="app.js" defer></script>
+</head>
+<body>
+<h2>Mini Expense Tracker</h2>
+
+<form>
+    <div>
+        <label>Title:</label>
+        <input type="text" id="title">
+    </div>
+    <br>
+    <div>
+        <label>Amount:</label>
+        <input type="number" id="amount">
+    </div>
+    <br>
+    <div>
+        <label>Date:</label>
+        <input type="date" id="date">
+    </div>
+    <br>
+    <button id="addBtn">Add Expense</button>
+    <button id="viewBtn">View Expenses</button>
+    <button id="deleteBtn">Delete By Title</button>
+    <hr>
+    <ul id="expenseList"></ul>
+</form>
+</body>
+</html>
