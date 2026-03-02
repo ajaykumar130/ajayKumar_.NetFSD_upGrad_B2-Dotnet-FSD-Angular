@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Product Cart</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+body{
+  font-family: Arial;
+  background: lightgray;
+}
+
+.header{
+  background: black;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.container{
+  width: 800px;
+  margin: 30px auto;
+}
+
+.product{
+  background: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+}
+
+button{
+  padding: 6px 12px;
+  background: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:disabled{
+  background: gray;
+  cursor: not-allowed;
+}
+
+.message{
+  color: green;
+  margin-left: 10px;
+  font-size: 14px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="header">
+  Cart Items: <span id="cartCount">0</span>
+</div>
+
+<div class="container">
+
+  <div class="product">
+    <div>
+      <h4>Laptop</h4>
+      <button class="addBtn">Add to Cart</button>
+      <span class="message"></span>
+    </div>
+  </div>
+
+  <div class="product">
+    <div>
+      <h4>Mobile</h4>
+      <button class="addBtn">Add to Cart</button>
+      <span class="message"></span>
+    </div>
+  </div>
+
+  <div class="product">
+    <div>
+      <h4>Headphones</h4>
+      <button class="addBtn">Add to Cart</button>
+      <span class="message"></span>
+    </div>
+  </div>
+
+  <div class="product">
+    <div>
+      <h4>Smartwatch</h4>
+      <button class="addBtn">Add to Cart</button>
+      <span class="message"></span>
+    </div>
+  </div>
+
+</div>
+
+<script>
+$(document).ready(function(){
+
+  let count = 0;
+  $(".container").on("click", ".addBtn", function(){
+
+      count++;
+      $("#cartCount").text(count);
+      $(this).prop("disabled", true);
+      $(this).text("Added");
+      $(this).attr("data-added", "true");
+      $(this).next(".message").text("Added to cart");
+
+  });
+
+});
+</script>
+
+</body>
+</html>

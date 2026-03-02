@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FAQ Section</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+body{
+  font-family: Arial;
+  background:white;
+}
+.container{
+  width:600px;
+  margin:40px auto;
+}
+.faq-item{
+  background:white;
+  margin-bottom:10px;
+  border-radius:5px;
+  padding:10px;
+}
+.question{
+  cursor:pointer;
+  font-weight:bold;
+}
+.answer{
+  display:none;
+  margin-top:8px;
+}
+.active{
+  color:blue;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <div class="question">1. What courses do you offer?</div>
+    <div class="answer">We offer Web Development, Java, Python, and .net courses.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="question">2. Is there placement support?</div>
+    <div class="answer">Yes, we provide placement assistance and interview preparation.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="question">3. What is the course duration?</div>
+    <div class="answer">Course duration ranges from 2 to 6 months depending on the program.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="question">4. Are classes online or offline?</div>
+    <div class="answer">We provide both online and classroom training options.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="question">5. Do you provide certificates?</div>
+    <div class="answer">Yes, certificates are provided after successful course completion.</div>
+  </div>
+
+</div>
+
+<script>
+$(document).ready(function(){
+
+  $(".question").click(function(){
+    $(this).next(".answer").slideToggle();
+    $(this).toggleClass("active");
+
+  });
+
+});
+</script>
+
+</body>
+</html>
