@@ -1,0 +1,11 @@
+<table border="1">
+    <tr>
+        <th>Id</th><th>Name</th><th>Email</th><th>Phone</th>
+    </tr>
+    <tr *ngFor="let contact of contacts">
+        <td>{{contact.id}}</td>
+        <td>{{contact.name}}</td>
+        <td>{{contact.email}}</td>
+        <td>{{contact.phone}}</td>
+    </tr>
+</table>

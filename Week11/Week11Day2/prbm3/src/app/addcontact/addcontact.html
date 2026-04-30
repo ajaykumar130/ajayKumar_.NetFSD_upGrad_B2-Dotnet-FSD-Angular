@@ -1,0 +1,27 @@
+<form #f="ngForm" (ngSubmit)="OnSubmit()">
+
+    <div>
+        <label for="id">Id:</label>
+        <input type="number" id="id" name="id" [(ngModel)]="contact.id" required>
+    </div>
+
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="contact.name" required>
+    </div>
+
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="contact.email" required>
+    </div>
+
+    <div>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" [(ngModel)]="contact.phone" required>
+    </div>
+
+    <div>
+        <button type="submit">Add Contact</button>
+    </div>
+
+</form>
